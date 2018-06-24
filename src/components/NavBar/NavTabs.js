@@ -1,17 +1,19 @@
 import React from "react";
-
+import "./NavTabs.css"
 const NavTabs = props => (
-  <ul className="nav nav-tabs">
-    <li className="nav-item">
-      <a href = "/" > Clicky Game </a>
-    </li>
-    <li className="nav-item">
-      You guessed correctly!
-    </li>
-    <li className="nav-item">
-      Score: 0 | Top Score: 0
-    </li>
-  </ul>
+  <nav>
+    <ul className="nav nav-tabs">
+      <li className="nav-item">
+        <a href = "/" > Clicky Game </a>
+      </li>
+      <li className="nav-item">
+        {props.answers}
+      </li>
+      <li className="nav-item">
+        Score: {props.score} | Top Score: {props.topScore}
+      </li>
+    </ul>
+  </nav>
 );
 
 export default NavTabs;
